@@ -61,35 +61,26 @@ vpp/
 
 ---
 
-## 🚀 Installation & Getting Started
+## 🚀 Download & Quick Start
 
-### 1. Requirements
-- **Windows / Linux / macOS** with **Python 3.10+** (or use standalone `vpp.exe` with zero dependencies).
+### 1. Download & Install (Windows)
+1. Download **`vpp_v2.0_windows_x64.zip`** from the [GitHub Releases](https://github.com/EliteClockman-ctrl/VPP_Programming_Language-Vietnam-/releases) page.
+2. Extract the downloaded `.zip` file.
+3. Double-click **`installer.bat`** (This automatically installs `vpp.exe` and sets up your system PATH).
 
-### 2. Basic Commands
+### 2. How to Run V++
+Open any **Terminal / Command Prompt / PowerShell** window and run:
 
 ```bash
-# 1. Run a V++ source file (.vpp)
-python3 main.py program.vpp
-# or directly with binary:
+# 1. Run a V++ code file
 vpp program.vpp
 
-# 2. Run with Transpiler mode (High Performance)
-python3 main.py -t program.vpp
+# 2. Launch the Interactive REPL Shell (live coding)
+vpp
 
-# 3. Execute inline code directly from command line
-python3 main.py -c 'in("Xin chao ngon ngu V++!");'
-
-# 4. Transpile .vpp to standalone Python 3 code
-python3 main.py bien_dich program.vpp -o output.py
-
-# 5. Launch the Interactive REPL Shell
-python3 main.py
-```
-
-### 3. Run Automated Tests
-```bash
-python3 tests/run_tests.py
+# 3. Check version & help
+vpp --version
+vpp --help
 ```
 
 ---
