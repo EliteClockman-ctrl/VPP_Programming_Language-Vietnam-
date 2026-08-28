@@ -1,68 +1,68 @@
 # 📝 V++ Programming Language — Changelog
 
-Tất cả các thay đổi, tính năng mới và cải tiến quan trọng của ngôn ngữ lập trình **V++ (Vietnamese Plus Plus)** được ghi lại chi tiết tại đây.
+All notable changes, features, and improvements for the **V++ (Vietnamese Plus Plus)** programming language are documented in this file.
 
 ---
 
-## 🚀 [1.0.0] - Bản Phát Hành Chính Thức Đầu Tiên (Official Release)
+## 🚀 [1.0.0] - Official First Release
 
-### 🌟 1. Cú pháp Thuần Việt & Đa Dạng Cách Viết
-- Hỗ trợ **100% cú pháp tiếng Việt** cả có dấu và không dấu:
-  - Khai báo biến & hằng: `bien` / `biến`, `hang` / `hằng` hoặc gán trực tiếp `x = 10`.
-  - Điều kiện rẽ nhánh: `neu` / `nếu`, `khong_thi_neu` / `hoac_neu` / `hoặc_nếu`, `khong_thi` / `không_thì` / `nguoc_lai`.
-  - Vòng lặp tự nhiên: `lap` / `lặp` ... `trong`, `lap` / `lặp` ... `lan` / `lần`, `lap ... tu ... den ...`, `khi` / `lap_khi` (while).
-  - Điều khiển vòng lặp: `dung` / `ngat` / `ngắt` (break), `tiep_tuc` / `tiếp_tục` (continue).
-  - Khai báo hàm: `ham` / `hàm`, `tra_ve` / `trả_về` (return).
-  - Giá trị logic: `dung` / `đúng` (true), `sai` (false), `rong` / `rỗng` / `null` (None/null).
-  - Phép toán logic: `va` / `và` / `&&`, `hoac` / `hoặc` / `||`, `phu_dinh` / `phủ_định` / `!`.
+### 🌟 1. Native Vietnamese Syntax & Flexible Writing Style
+- Full support for **100% Vietnamese syntax** (both unaccented and accented):
+  - **Variable & Constant Declarations**: `bien` / `biến`, `hang` / `hằng`, or direct assignment `x = 10`.
+  - **Conditional Branching**: `neu` / `nếu` (`if`), `khong_thi_neu` / `hoac_neu` / `hoặc_nếu` (`elif`), `khong_thi` / `không_thì` / `nguoc_lai` (`else`).
+  - **Natural Loops**: `lap` / `lặp` ... `trong` (`for...in`), `lap` / `lặp` ... `lan` / `lần` (repeat $N$ times), `lap ... tu ... den ...` (range loops), `khi` / `lap_khi` (`while`).
+  - **Loop Controls**: `dung` / `ngat` / `ngắt` (`break`), `tiep_tuc` / `tiếp_tục` (`continue`).
+  - **Function Declarations**: `ham` / `hàm` (`def`/`func`), `tra_ve` / `trả_về` (`return`).
+  - **Boolean & Null Values**: `dung` / `đúng` (`true`), `sai` (`false`), `rong` / `rỗng` / `null` (`None`/`null`).
+  - **Logical Operators**: `va` / `và` / `&&` (`AND`), `hoac` / `hoặc` / `||` (`OR`), `phu_dinh` / `phủ_định` / `!` (`NOT`).
 
 ---
 
-### ⚡ 2. Động Cơ Thực Thi Kép (Dual Execution Engine)
+### ⚡ 2. Dual Execution Engines
 - **High-Speed Python 3 Transpiler**:
-  - Tự động biên dịch mã nguồn V++ sang mã máy Python tối ưu với tốc độ siêu nhanh (nhanh hơn Python thông thường x10 lần đối với các thuật toán mảng và đệ quy).
-  - Hỗ trợ xuất mã nguồn thuần sang file `.py` bằng lệnh `vpp bien_dich file.vpp -o output.py`.
+  - Automatically transpiles V++ source code into highly optimized Python 3 runtime code (up to 10x faster for array operations and recursion).
+  - Supports direct export to pure Python files via `vpp bien_dich file.vpp -o output.py`.
 - **AST Tree-Walking Interpreter**:
-  - Trình thông dịch trực tiếp phục vụ cho việc kiểm tra cú pháp nhanh và chạy dòng lệnh tức thì.
-- **Hệ thống Chẩn đoán & Báo lỗi (Diagnostics)**:
-  - Thông báo lỗi 100% bằng tiếng Việt có dấu, chỉ rõ số dòng, số cột và gợi ý cách khắc phục lỗi.
+  - Direct interpreter for instant evaluation, unit testing, and dynamic execution.
+- **Diagnostics & Error Reporting System**:
+  - Comprehensive, localized error messages indicating exact line, column, and actionable suggestions.
 
 ---
 
-### 🏛️ 3. Lập Trình Hướng Đối Tượng (OOP) Hoàn Chỉnh
-- Khai báo lớp đối tượng: `lop` / `lớp`.
-- Kế thừa lớp: `ke_thua` / `kế_thừa` (extends/inheritance).
-- Hàm khởi tạo (Constructor): `khoi_tao` / `khởi_tạo`.
-- Tham chiếu đối tượng bản thân: `ban_than` / `bản_thân` (this/self).
-- Đa hình, ghi đè phương thức và đóng gói thuộc tính.
+### 🏛️ 3. Full Object-Oriented Programming (OOP)
+- Class declarations: `lop` / `lớp` (`class`).
+- Inheritance: `ke_thua` / `kế_thừa` (`extends`/`inheritance`).
+- Constructors: `khoi_tao` / `khởi_tạo` (`__init__`/`constructor`).
+- Instance reference: `ban_than` / `bản_thân` (`this`/`self`).
+- Full support for polymorphism, encapsulation, and method overriding.
 
 ---
 
-### 📚 4. Thư Viện Chuẩn Phong Phú (Built-in Standard Library)
-- **Xử lý Văn bản & Chuỗi**:
-  - `chu_hoa` / `chữ_hoa`, `chu_thuong` / `chữ_thường`, `viet_hoa_dau` / `viết_hoa_đầu`.
-  - `dem_tu` / `đếm_từ`, `dao_nguoc` / `đảo_ngược`, `cat_chuoi` / `cắt_chuỗi`, `noi_chuoi` / `nối_chuỗi`, `thay_the` / `thay_thế`.
-- **Toán học & Thống kê**:
-  - `can` / `căn` (căn bậc hai), `luy_thua` / `lũy_thừa`, `lam_tron` / `làm_tròn`.
-  - `tong` / `tổng`, `trung_binh` / `trung_bình`, `lon_nhat` / `lớn_nhất` (`ln`), `nho_nhat` / `nhỏ_nhất` (`nn`).
-- **Mảng & Danh sách**:
-  - `them` / `thêm` (append), `chen` / `chèn` (insert), `xoa` / `xóa` (remove), `sap_xep` / `sắp_xếp` (sort), `chon_ngau_nhien` / `chọn_ngẫu_nhiên`.
-- **Tương tác Tệp & Hệ Thống (File I/O)**:
-  - `doc_tep` / `đọc_tệp`, `ghi_tep` / `ghi_tệp`, `xoa_tep` / `xóa_tệp`, `danh_sach_tep` / `danh_sách_tệp`.
-  - `lenh` / `lệnh` (thực thi tiến trình shell hệ điều hành an toàn với timeout).
-- **Mạng & Máy Chủ Web Fullstack**:
-  - `tao_may_chu_web` / `tạo_máy_chủ_web`: Khởi tạo máy chủ HTTP REST API và phục vụ giao diện Frontend HTML5/CSS3.
-  - `tai_trang_web` / `tải_trang_web`: Gửi yêu cầu tải dữ liệu từ internet.
-  - `chuyen_json` / `chuyển_json`, `giai_ma_json` / `giải_mã_json`.
+### 📚 4. Rich Built-in Standard Library
+- **Text & String Processing**:
+  - `chu_hoa` / `chữ_hoa` (uppercase), `chu_thuong` / `chữ_thường` (lowercase), `viet_hoa_dau` / `viết_hoa_đầu` (title case).
+  - `dem_tu` / `đếm_từ` (word count), `dao_nguoc` / `đảo_ngược` (reverse), `cat_chuoi` / `cắt_chuỗi` (split), `noi_chuoi` / `nối_chuỗi` (join), `thay_the` / `thay_thế` (replace).
+- **Mathematics & Statistics**:
+  - `can` / `căn` (square root), `luy_thua` / `lũy_thừa` (power), `lam_tron` / `làm_tròn` (round).
+  - `tong` / `tổng` (sum), `trung_binh` / `trung_bình` (average), `lon_nhat` / `lớn_nhất` (`ln`/max), `nho_nhat` / `nhỏ_nhất` (`nn`/min).
+- **Arrays & Collections**:
+  - `them` / `thêm` (append), `chen` / `chèn` (insert), `xoa` / `xóa` (remove), `sap_xep` / `sắp_xếp` (sort), `chon_ngau_nhien` / `chọn_ngẫu_nhiên` (random choice).
+- **File System & OS I/O**:
+  - `doc_tep` / `đọc_tệp` (read file), `ghi_tep` / `ghi_tệp` (write file), `xoa_tep` / `xóa_tệp` (delete file), `danh_sach_tep` / `danh_sách_tệp` (list files).
+  - `lenh` / `lệnh` (safe shell command execution with timeout management).
+- **Networking & Fullstack Web Server**:
+  - `tao_may_chu_web` / `tạo_máy_chủ_web`: Built-in HTTP REST API engine with HTML5/CSS3 static file serving.
+  - `tai_trang_web` / `tải_trang_web`: Fetch web content and remote APIs.
+  - `chuyen_json` / `chuyển_json`, `giai_ma_json` / `giải_mã_json` (JSON serialization & parsing).
 
 ---
 
-### 🛠️ 5. Công Cụ & Hệ Sinh Thái Lập Trình
-- **Binary thực thi độc lập (`vpp.exe`)**:
-  - Đóng gói nguyên khối, chạy trực tiếp trên Windows không cần cài đặt Python.
-- **Trình tự động cài đặt 1-Click (`dist/installer.bat`)**:
-  - Tự động thiết lập biến môi trường PATH và đăng ký mở tệp đuôi `.vpp`.
+### 🛠️ 5. Tooling & Developer Ecosystem
+- **Standalone Windows Binary (`vpp.exe`)**:
+  - Self-contained executable with zero dependencies (no Python installation required).
+- **1-Click Auto Installer (`dist/installer.bat`)**:
+  - Automatically sets up the system PATH and registers `.vpp` file association.
 - **VS Code Extension (`vpp-language-support`)**:
-  - Hỗ trợ tô màu cú pháp (Syntax Highlighting), bộ Snippets gợi ý code và biểu tượng tệp V++.
-- **Chế độ dòng lệnh tương tác REPL**:
-  - Gõ và chạy code trực tiếp từng dòng trên Terminal.
+  - Full syntax highlighting, snippet autocompletion, and file icon support.
+- **Interactive REPL Shell**:
+  - Live interactive coding directly in the terminal.
