@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 ========================================================================
-  V++ PROGRAMMING LANGUAGE (PHIÊN BẢN 2.0) — MASTER ENTRY POINT
+  V++ PROGRAMMING LANGUAGE (PHIÊN BẢN 1.0) — MASTER ENTRY POINT
 ========================================================================
 """
 
