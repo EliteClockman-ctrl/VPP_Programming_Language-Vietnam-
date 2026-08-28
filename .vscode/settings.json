@@ -1,0 +1,12 @@
+﻿{
+    "files.associations": {
+        "*.vpp": "vpp"
+    },
+    "editor.suggestSelection": "first",
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": true,
+        "strings": true
+    },
+    "editor.bracketPairColorization.enabled": true
+}

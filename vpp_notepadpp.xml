@@ -1,0 +1,29 @@
+<NotepadPlus>
+    <UserLang name="V++" ext="vpp">
+        <Settings>
+            <GlobalCaseIgnored>no</GlobalCaseIgnored>
+            <TreatAsSymbol>no</TreatAsSymbol>
+        </Settings>
+        <KeywordLists>
+            <Keywords name="Folder+">{</Keywords>
+            <Keywords name="Folder-">}</Keywords>
+            <Keywords name="Operators">- + * / = == != &lt; &gt; &lt;= &gt;= += -=</Keywords>
+            <Keywords name="Comment">1// 2/* 0*/</Keywords>
+            <Keywords name="Words1">biến bien hằng hang hàm ham lớp lop kế_thừa ke_thua khởi_tạo khoi_tao bản_thân ban_than nếu neu không_thì_nếu khong_thi_neu hoặc_nếu hoac_neu không_thì khong_thi ngược_lại nguoc_lai khi lặp_khi lap_khi lặp lap trong lần lan từ tu đến den dừng_lặp dung_lap tiếp_tục tiep_tuc trả_về tra_ve thử thu bắt_lỗi bat_loi ném_lỗi nem_loi đúng dung sai rỗng rong và va hoặc hoac phủ_định phu_dinh không khong</Keywords>
+            <Keywords name="Words2">nói noi nói_liền noi_lien in in_lien hỏi hoi hỏi_số hoi_so nhập nhap ln nn tổng tong lớn_nhất lon_nhat nhỏ_nhất nho_nhat độ_dài do_dai thêm them xóa xoa chèn chen sắp_xếp sap_xep đảo_ngược dao_nguoc phạm_vi pham_vi chuyển_json chuyen_json giải_mã_json giai_ma_json tải_trang_web tai_trang_web căn_bậc_hai can_bac_hai làm_tròn lam_tron ngẫu_nhiên ngau_nhien đọc doc ghi</Keywords>
+        </KeywordLists>
+        <Styles>
+            <WordsStyle name="DEFAULT" styleID="11" fgColor="CCCCCC" bgColor="1E1E1E" fontName="Consolas" fontStyle="0" fontSize="11" />
+            <WordsStyle name="FOLDEROPEN" styleID="12" fgColor="CCCCCC" bgColor="1E1E1E" fontName="Consolas" fontStyle="0" fontSize="11" />
+            <WordsStyle name="FOLDERCLOSE" styleID="13" fgColor="CCCCCC" bgColor="1E1E1E" fontName="Consolas" fontStyle="0" fontSize="11" />
+            <WordsStyle name="KEYWORD1" styleID="5" fgColor="C586C0" bgColor="1E1E1E" fontName="Consolas" fontStyle="1" fontSize="11" />
+            <WordsStyle name="KEYWORD2" styleID="6" fgColor="DCDCAA" bgColor="1E1E1E" fontName="Consolas" fontStyle="0" fontSize="11" />
+            <WordsStyle name="COMMENT" styleID="1" fgColor="6A9955" bgColor="1E1E1E" fontName="Consolas" fontStyle="2" fontSize="11" />
+            <WordsStyle name="COMMENTLINE" styleID="2" fgColor="6A9955" bgColor="1E1E1E" fontName="Consolas" fontStyle="2" fontSize="11" />
+            <WordsStyle name="NUMBER" styleID="4" fgColor="B5CEA8" bgColor="1E1E1E" fontName="Consolas" fontStyle="0" fontSize="11" />
+            <WordsStyle name="OPERATOR" styleID="10" fgColor="569CD6" bgColor="1E1E1E" fontName="Consolas" fontStyle="0" fontSize="11" />
+            <WordsStyle name="DELIMETER1" styleID="14" fgColor="CE9178" bgColor="1E1E1E" fontName="Consolas" fontStyle="0" fontSize="11" />
+            <WordsStyle name="DELIMETER2" styleID="15" fgColor="CE9178" bgColor="1E1E1E" fontName="Consolas" fontStyle="0" fontSize="11" />
+        </Styles>
+    </UserLang>
+</NotepadPlus>

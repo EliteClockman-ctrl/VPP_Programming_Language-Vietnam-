@@ -1,0 +1,133 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "V++",
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#strings" },
+    { "include": "#numbers" },
+    { "include": "#keywords" },
+    { "include": "#builtins" },
+    { "include": "#operators" },
+    { "include": "#function-declarations" }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.vpp",
+          "match": "//.*$"
+        },
+        {
+          "name": "comment.block.vpp",
+          "begin": "/\\*",
+          "end": "\\*/"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.vpp",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.vpp",
+              "match": "\\\\."
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.single.vpp",
+          "begin": "'",
+          "end": "'",
+          "patterns": [
+            {
+              "name": "constant.character.escape.vpp",
+              "match": "\\\\."
+            }
+          ]
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.float.vpp",
+          "match": "\\b[0-9]+\\.[0-9]+\\b"
+        },
+        {
+          "name": "constant.numeric.integer.vpp",
+          "match": "\\b[0-9]+\\b"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.vpp",
+          "match": "\\b(nếu|neu|không_thì_nếu|khong_thi_neu|hoặc_nếu|hoac_neu|không_thì|khong_thi|ngược_lại|nguoc_lai|khi|lặp_khi|lap_khi|lặp|lap|trong|lần|lan|từ|tu|đến|den|dừng_lặp|dung_lap|tiếp_tục|tiep_tuc|trả_về|tra_ve|thử|thu|bắt_lỗi|bat_loi|ném_lỗi|nem_loi)\\b"
+        },
+        {
+          "name": "storage.type.vpp",
+          "match": "\\b(biến|bien|hằng|hang|hàm|ham|lớp|lop|kế_thừa|ke_thua|khởi_tạo|khoi_tao|dùng_thư_viện|dung_thu_vien|tải|tai)\\b"
+        },
+        {
+          "name": "variable.language.vpp",
+          "match": "\\b(bản_thân|ban_than)\\b"
+        },
+        {
+          "name": "constant.language.boolean.vpp",
+          "match": "\\b(đúng|dung|sai|rỗng|rong)\\b"
+        },
+        {
+          "name": "keyword.operator.logical.vpp",
+          "match": "\\b(và|va|hoặc|hoac|phủ_định|phu_dinh|không|khong)\\b"
+        }
+      ]
+    },
+    "builtins": {
+      "patterns": [
+        {
+          "name": "support.function.builtin.vpp",
+          "match": "\\b(nói|noi|nói_liền|noi_lien|in|in_lien|hỏi|hoi|hỏi_số|hoi_so|nhập|nhap|ln|nn|tổng|tong|lớn_nhất|lon_nhat|nhỏ_nhất|nho_nhat|độ_dài|do_dai|thêm|them|xóa|xoa|chèn|chen|sắp_xếp|sap_xep|đảo_ngược|dao_nguoc|phạm_vi|pham_vi|chuyển_json|chuyen_json|giải_mã_json|giai_ma_json|tải_trang_web|tai_trang_web|căn_bậc_hai|can_bac_hai|làm_tròn|lam_tron|số_ngẫu_nhiên|so_ngau_nhien|ngẫu_nhiên|ngau_nhien|thời_gian_hiện_tại|thoi_gian_hien_tai|tạm_dừng|tam_dung|đọc_tệp|doc_tep|đọc|doc|ghi_tệp|ghi_tep|ghi|xóa_tep|danh_sach_tep|chuỗi|so_nguyen|so_thuc|kieu_du_lieu)\\b"
+        }
+      ]
+    },
+    "function-declarations": {
+      "patterns": [
+        {
+          "match": "\\b(hàm|ham)\\s+([a-zA-Z_À-ỹ0-9]+)\\s*\\(",
+          "captures": {
+            "1": { "name": "storage.type.function.vpp" },
+            "2": { "name": "entity.name.function.vpp" }
+          }
+        },
+        {
+          "match": "\\b(lớp|lop)\\s+([a-zA-Z_À-ỹ0-9]+)",
+          "captures": {
+            "1": { "name": "storage.type.class.vpp" },
+            "2": { "name": "entity.name.class.vpp" }
+          }
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.arithmetic.vpp",
+          "match": "(\\+|\\-|\\*|/|%|\\+\\+|\\-\\-|\\+=|\\-=|\\*=|/=|%=)"
+        },
+        {
+          "name": "keyword.operator.comparison.vpp",
+          "match": "(==|!=|<=|>=|<|>)"
+        },
+        {
+          "name": "keyword.operator.assignment.vpp",
+          "match": "(=)"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.vpp"
+}

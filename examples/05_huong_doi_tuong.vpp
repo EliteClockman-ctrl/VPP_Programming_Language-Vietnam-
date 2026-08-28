@@ -1,0 +1,60 @@
+// ==========================================
+// Bai 5: Lap trinh Huong Doi Tuong (OOP) trong V++
+// ==========================================
+
+lop TaiKhoan {
+    khoi_tao(ten_chu, so_du_dau) {
+        ban_than.ten_chu = ten_chu;
+        ban_than.so_du = so_du_dau;
+        ban_than.lich_su_giao_dich = [];
+    }
+
+    ham nap_tien(tien) {
+        neu (tien <= 0) {
+            nem_loi "Tien nap phai lon hon 0!";
+        }
+        ban_than.so_du += tien;
+        them(ban_than.lich_su_giao_dich, "[NAP] +" + chuoi(tien) + " VND");
+        in("Da nap", tien, "VND vao tai khoan cua", ban_than.ten_chu);
+    }
+
+    ham rut_tien(tien) {
+        neu (tien > ban_than.so_du) {
+            nem_loi "Khong du so du de rut!";
+        }
+        ban_than.so_du -= tien;
+        them(ban_than.lich_su_giao_dich, "[RUT] -" + chuoi(tien) + " VND");
+        in("Da rut", tien, "VND tu tai khoan cua", ban_than.ten_chu);
+    }
+
+    ham in_sao_ke() {
+        in("--- SAO KE TAI KHOAN:", ban_than.ten_chu, "---");
+        in("So du hien tai:", ban_than.so_du, "VND");
+        in("Lich su giao dich:");
+        lap (gd trong ban_than.lich_su_giao_dich) {
+            in("  -", gd);
+        }
+    }
+}
+
+lop TaiKhoanTietKiem ke_thua TaiKhoan {
+    khoi_tao(ten_chu, so_du_dau, lai_suat_nam) {
+        ban_than.ten_chu = ten_chu;
+        ban_than.so_du = so_du_dau;
+        ban_than.lich_su_giao_dich = [];
+        ban_than.lai_suat = lai_suat_nam;
+    }
+
+    ham tinh_lai_hang_thang() {
+        bien tien_lai = ban_than.so_du * (ban_than.lai_suat / 100 / 12);
+        tien_lai = lam_tron(tien_lai, 0);
+        ban_than.nap_tien(tien_lai);
+        in("Tien lai thang nhan duoc:", tien_lai, "VND (Lai suat:", ban_than.lai_suat, "%/nam)");
+    }
+}
+
+bien tk = TaiKhoanTietKiem("Vuong Gia Binh", 50000000, 6.5);
+tk.nap_tien(10000000);
+tk.rut_tien(5000000);
+tk.tinh_lai_hang_thang();
+tk.in_sao_ke();

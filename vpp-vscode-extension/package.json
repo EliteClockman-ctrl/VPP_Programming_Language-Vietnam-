@@ -1,0 +1,41 @@
+{
+  "name": "vpp-language-support",
+  "displayName": "V++ Language Support (Ngôn Ngữ V++)",
+  "description": "Hỗ trợ tô màu cú pháp, gợi ý code, snippets và chạy mã nguồn V++ (.vpp) trên Visual Studio Code",
+  "version": "1.2.0",
+  "publisher": "vpp-team",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "vpp",
+        "aliases": ["V++", "vpp", "VPlusPlus"],
+        "extensions": [".vpp"],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./icon.png",
+          "dark": "./icon.png"
+        }
+      }
+    ],
+    "grammars": [
+      {
+        "language": "vpp",
+        "scopeName": "source.vpp",
+        "path": "./syntaxes/vpp.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "vpp",
+        "path": "./snippets/vpp.code-snippets"
+      }
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+// ==========================================
+//   Tìm Số Nguyên Tố Trong V++ (Siêu Ngắn & Cực Nhanh)
+// ==========================================
+
+hàm kiem_tra_nguyen_to(n) {
+    nếu n < 2 { trả_về sai }
+    lặp i từ 2 đến căn(n) {
+        nếu n % i = 0 { trả_về sai }
+    }
+    trả_về đúng
+}
+
+danh_sach_nt = []
+
+lặp x từ 2 đến 50 {
+    nếu kiem_tra_nguyen_to(x) {
+        thêm(danh_sach_nt, x)
+    }
+}
+
+nói "========================================="
+nói "  DANH SÁCH SỐ NGUYÊN TỐ TỪ 2 ĐẾN 50     "
+nói "========================================="
+nói "Các số tìm được :", danh_sach_nt
+nói "Tổng số lượng   :", dài(danh_sach_nt)

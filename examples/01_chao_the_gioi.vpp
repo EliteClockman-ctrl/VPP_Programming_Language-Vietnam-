@@ -1,0 +1,29 @@
+// ==========================================
+// Bai 1: Chuong trinh Xin Chao & Bien trong V++
+// ==========================================
+
+in("========================================");
+in("   Chao mung den voi Ngon ngu V++ (.vpp)  ");
+in("========================================");
+
+// 1. Khai bao bien voi tu khoa 'bien'
+bien loi_chao = "Xin chao the gioi lap trinh V++!";
+bien nam_phat_trien = 2026;
+bien phien_ban = 1.0;
+bien dang_hoat_dong = dung;
+
+in("Thong diep:", loi_chao);
+in("Nam:", nam_phat_trien);
+in("Phien ban:", phien_ban);
+in("Trang thai:", dang_hoat_dong);
+
+// 2. Khai bao hang so voi tu khoa 'hang'
+hang PI = 3.14159265359;
+hang TEN_NGON_NGU = "V++";
+
+in("Ngon ngu:", TEN_NGON_NGU, "- Hang so PI:", PI);
+
+// 3. Kiem tra kieu du lieu
+in("Kieu cua 'loi_chao':", kieu(loi_chao));
+in("Kieu cua 'nam_phat_trien':", kieu(nam_phat_trien));
+in("Kieu cua 'dang_hoat_dong':", kieu(dang_hoat_dong));

@@ -1,0 +1,32 @@
+// ==========================================
+// Bai 3: Vong lap & Thao tac voi Danh sach
+// Tim cac so nguyen to tu 1 den 50
+// ==========================================
+
+ham kiem_tra_so_nguyen_to(n) {
+    neu (n < 2) {
+        tra_ve sai;
+    }
+    bien gioi_han = so_nguyen(can_bac_hai(n));
+    bien i = 2;
+    khi (i <= gioi_han) {
+        neu (n % i == 0) {
+            tra_ve sai;
+        }
+        i++;
+    }
+    tra_ve dung;
+}
+
+in("--- TIM SO NGUYEN TO TU 1 DEN 50 ---");
+bien ds_snt = [];
+
+lap (so trong pham_vi(1, 51)) {
+    neu (kiem_tra_so_nguyen_to(so)) {
+        them(ds_snt, so);
+    }
+}
+
+in("Danh sach cac so nguyen to tim duoc:");
+in(ds_snt);
+in("Tong so luong so nguyen to:", do_dai(ds_snt));

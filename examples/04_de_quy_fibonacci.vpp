@@ -1,0 +1,25 @@
+// ==========================================
+//   Hàm đệ quy Tính Giai thừa & Fibonacci
+// ==========================================
+hàm giai_thua(n) {
+    nếu (n <= 1) { trả_về 1; }
+    trả_về n * giai_thua(n - 1);
+}
+
+hàm fibonacci(n) {
+    nếu (n <= 0) { trả_về 0; }
+    nếu (n == 1) { trả_về 1; }
+    trả_về fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+nói("=========================================");
+nói("      THUẬT TOÁN ĐỆ QUY TRONG V++        ");
+nói("=========================================");
+nói("Giai thừa 6! =", giai_thua(6));
+nói("Giai thừa 8! =", giai_thua(8));
+
+biến day_fib = [];
+lặp (i trong phạm_vi(10)) {
+    thêm(day_fib, fibonacci(i));
+}
+nói("10 số đầu tiên trong dãy Fibonacci:", day_fib);

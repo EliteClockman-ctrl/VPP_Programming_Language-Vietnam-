@@ -1,0 +1,30 @@
+// ==========================================
+//   Xử lý JSON & Cấu trúc Dữ liệu trong V++
+// ==========================================
+biến du_an = {
+    "ten": "V++ Programming Language",
+    "phien_ban": 1.2,
+    "nam": 2026,
+    "tinh_nang": [
+        "Cú pháp Tiếng Việt thuần túy có dấu & không dấu",
+        "Hiệu năng thực thi cao Native Speed",
+        "Hỗ trợ Extension trên Visual Studio Code",
+        "Trình biên dịch độc lập vpp.exe"
+    ],
+    "trang_thai": "Hoàn thiện 100%"
+};
+
+biến json_text = chuyển_json(du_an, 2);
+nói("=========================================");
+nói("       DỮ LIỆU ĐỊNH DẠNG JSON TRONG V++  ");
+nói("=========================================");
+nói(json_text);
+
+biến parsed = giải_mã_json(json_text);
+nói("=========================================");
+nói("Tên dự án      :", parsed["ten"]);
+nói("Năm phát triển :", parsed["nam"]);
+nói("Danh sách tính năng:");
+lặp (tn trong parsed["tinh_nang"]) {
+    nói("  * " + tn);
+}

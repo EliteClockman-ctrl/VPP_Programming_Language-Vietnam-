@@ -1,0 +1,54 @@
+{
+  "In kết quả (nói)": {
+    "prefix": "noi",
+    "body": ["nói($1);"],
+    "description": "In thông tin ra màn hình trong V++"
+  },
+  "Khai báo biến": {
+    "prefix": "bien",
+    "body": ["biến ${1:ten_bien} = ${2:gia_tri};"],
+    "description": "Khai báo biến mới trong V++"
+  },
+  "Khai báo hàm": {
+    "prefix": "ham",
+    "body": [
+      "hàm ${1:ten_ham}(${2:tham_so}) {",
+      "\t$0",
+      "\ttrả_về ${3:gia_tri};",
+      "}"
+    ],
+    "description": "Định nghĩa hàm mới trong V++"
+  },
+  "Câu lệnh điều kiện (nếu)": {
+    "prefix": "neu",
+    "body": [
+      "nếu (${1:dieu_kien}) {",
+      "\t$0",
+      "} không_thì {",
+      "\t",
+      "}"
+    ],
+    "description": "Cấu trúc rẽ nhánh nếu/không_thì trong V++"
+  },
+  "Vòng lặp (lặp)": {
+    "prefix": "lap",
+    "body": [
+      "lặp (${1:i} trong ${2:pham_vi(10)}) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Vòng lặp for trong V++"
+  },
+  "Khai báo lớp (OOP)": {
+    "prefix": "lop",
+    "body": [
+      "lớp ${1:TenLop} {",
+      "\thàm khởi_tạo(${2:tham_so}) {",
+      "\t\tbản_thân.${3:thuoc_tinh} = ${2:tham_so};",
+      "\t}",
+      "\t$0",
+      "}"
+    ],
+    "description": "Định nghĩa lớp Hướng đối tượng trong V++"
+  }
+}
