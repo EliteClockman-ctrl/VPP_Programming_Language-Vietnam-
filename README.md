@@ -5,7 +5,7 @@
 
 ---
 
-## 🌟 Key Features
+## Key Features
 
 - **Intuitive Vietnamese Syntax**: Easy to read, write, and remember (`bien`/`biến`, `hang`/`hằng`, `neu`/`nếu`, `khong_thi`/`không_thì`, `khi`, `lap`/`lặp`, `ham`/`hàm`, `lop`/`lớp`, `ban_than`/`bản_thân`, etc.).
 - **Standard File Extension**: `.vpp` (e.g., `program.vpp`).
@@ -25,7 +25,7 @@
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 vpp/
@@ -61,10 +61,10 @@ vpp/
 
 ---
 
-## 🚀 Download & Quick Start
+## Download & Quick Start
 
 ### 1. Download & Install (Windows)
-1. Download **`vpp_v2.0_windows_x64.zip`** from the [GitHub Releases](https://github.com/EliteClockman-ctrl/VPP_Programming_Language-Vietnam-/releases) page.
+1. Download **`vpp_v1.0_windows_x64.zip`** from the [GitHub Releases](https://github.com/EliteClockman-ctrl/VPP_Programming_Language-Vietnam-/releases) page.
 2. Extract the downloaded `.zip` file.
 3. Double-click **`installer.bat`** (This automatically installs `vpp.exe` and sets up your system PATH).
 
