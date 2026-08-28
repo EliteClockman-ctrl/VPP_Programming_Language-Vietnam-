@@ -21,7 +21,7 @@
   - **Networking & Web**: Built-in HTTP server (`tao_may_chu_web`/`tạo_máy_chủ_web`), REST APIs, and HTTP request clients (`tai_trang_web`/`tải_trang_web`).
   - **Time & Utilities**: `cho`/`chờ` / `ngu`/`ngủ` (sleep), `thoi_gian_hien_tai`/`thời_gian_hiện_tại` (current timestamp).
 - **Interactive CLI & REPL Environment**: Run source files directly, compile on the fly, or launch the interactive terminal shell.
-- **VS Code Extension & GUI Studio**: Full syntax highlighting, snippet autocompletion, and dedicated `vpp_studio` GUI IDE.
+- **VS Code Extension**: Full syntax highlighting, themes, and snippet autocompletion.
 
 ---
 
@@ -31,7 +31,6 @@
 vpp/
 ├── main.py                     # Master CLI and Runner entry point
 ├── vpp.exe                     # Standalone Windows Binary (Single file executable)
-├── vpp_studio.exe              # Visual Studio-style GUI IDE for V++
 ├── README.md                   # Project overview & documentation (English)
 ├── huong_dan_su_dung.md        # Comprehensive Vietnamese language guide
 ├── vpp_core/                   # Core Language Engine
@@ -46,8 +45,7 @@ vpp/
 │   ├── transpiler.py           # High-performance Python 3 Transpiler
 │   ├── web_framework.py        # Native REST API & Web Server Engine
 │   ├── vpp_cli.py              # CLI Argument Handler
-│   ├── repl.py                 # Interactive REPL Shell
-│   └── vpp_studio.py           # GUI IDE Application
+│   └── repl.py                 # Interactive REPL Shell
 ├── dist/                       # Release distribution & auto-installer
 │   ├── installer.bat           # 1-Click Windows PATH installer
 │   └── README.txt              # End-user release guide
@@ -85,13 +83,13 @@ vpp/
 ```bash
 # 1. Run a V++ source file (.vpp)
 python3 main.py examples/01_chao_the_gioi.vpp
-# or directly if using vpp.exe:
+# or directly with binary:
 vpp examples/01_chao_the_gioi.vpp
 
 # 2. Run with Transpiler mode (High Performance)
 python3 main.py -t examples/06_thuat_toan_sap_xep.vpp
 
-# 3. Execute inline code directly from the command line
+# 3. Execute inline code directly from command line
 python3 main.py -c 'in("Xin chao ngon ngu V++!");'
 
 # 4. Transpile .vpp to standalone Python 3 code
@@ -99,16 +97,11 @@ python3 main.py bien_dich examples/05_huong_doi_tuong.vpp -o tai_khoan.py
 
 # 5. Launch the Interactive REPL Shell
 python3 main.py
-
-# 6. Launch the V++ Studio Visual IDE
-python3 main.py --studio
 ```
 
 ### 3. Run Automated Tests
 ```bash
 python3 tests/run_tests.py
-# or
-python3 -m unittest discover tests
 ```
 
 ---

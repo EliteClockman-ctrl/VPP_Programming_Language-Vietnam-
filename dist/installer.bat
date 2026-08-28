@@ -11,7 +11,6 @@ set "VPP_DIR=%VPP_DIR:~0,-1%"
 echo [1/3] Đang sao chép tệp thực thi vào thư mục hệ thống...
 if not exist "%USERPROFILE%\.vpp" mkdir "%USERPROFILE%\.vpp"
 copy /Y "%VPP_DIR%\vpp.exe" "%USERPROFILE%\.vpp\vpp.exe" >nul
-copy /Y "%VPP_DIR%\vpp_studio.exe" "%USERPROFILE%\.vpp\vpp_studio.exe" >nul
 
 echo [2/3] Đang cấu hình biến môi trường PATH...
 for /f "tokens=2*" %%a in ('reg query "HKCU\Environment" /v Path 2^>nul') do set "USER_PATH=%%b"
@@ -36,7 +35,7 @@ echo ==========================================================
 echo    🎉 CÀI ĐẶT V++ HOÀN TẤT THÀNH CÔNG 100%!
 echo.
 echo    • Chạy code : vpp ten_file.vpp
-echo    • Mở IDE GUI: vpp_studio
+echo    • REPL tương tác: vpp
 echo    • Xem trợ giúp: vpp --help
 echo ==========================================================
 pause
