@@ -49,18 +49,6 @@ vpp/
 ├── dist/                       # Release distribution & auto-installer
 │   ├── installer.bat           # 1-Click Windows PATH installer
 │   └── README.txt              # End-user release guide
-├── examples/                   # Official example programs (.vpp)
-│   ├── 01_chao_the_gioi.vpp
-│   ├── 02_tinh_toan_va_dieu_kien.vpp
-│   ├── 03_vong_lap_va_danh_sach.vpp
-│   ├── 04_ham_va_de_quy.vpp
-│   ├── 05_huong_doi_tuong.vpp
-│   ├── 06_thuat_toan_sap_xep.vpp
-│   ├── 07_json_va_web.vpp
-│   ├── 08_mini_game_doan_so.vpp
-│   ├── 09_vong_lap_sieu_de.vpp
-│   ├── 13_fullstack_web_va_backend.vpp
-│   └── 16_vpp_sieu_de_sieu_tien_loi.vpp
 ├── tests/                      # Automated Unit & Integration Test Suite
 │   ├── test_all.py
 │   ├── test_advanced.py
@@ -82,18 +70,18 @@ vpp/
 
 ```bash
 # 1. Run a V++ source file (.vpp)
-python3 main.py examples/01_chao_the_gioi.vpp
+python3 main.py program.vpp
 # or directly with binary:
-vpp examples/01_chao_the_gioi.vpp
+vpp program.vpp
 
 # 2. Run with Transpiler mode (High Performance)
-python3 main.py -t examples/06_thuat_toan_sap_xep.vpp
+python3 main.py -t program.vpp
 
 # 3. Execute inline code directly from command line
 python3 main.py -c 'in("Xin chao ngon ngu V++!");'
 
 # 4. Transpile .vpp to standalone Python 3 code
-python3 main.py bien_dich examples/05_huong_doi_tuong.vpp -o tai_khoan.py
+python3 main.py bien_dich program.vpp -o output.py
 
 # 5. Launch the Interactive REPL Shell
 python3 main.py
