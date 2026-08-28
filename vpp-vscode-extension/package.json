@@ -4,6 +4,11 @@
   "description": "Hỗ trợ tô màu cú pháp, gợi ý code, snippets và chạy mã nguồn V++ (.vpp) trên Visual Studio Code",
   "version": "1.0.0",
   "publisher": "vpp-team",
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EliteClockman-ctrl/VPP_Programming_Language-Vietnam-.git"
+  },
   "engines": {
     "vscode": "^1.60.0"
   },
